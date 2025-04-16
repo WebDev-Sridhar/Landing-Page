@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GigFloww - Your Creative Gig Journey Starts Here</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+ 
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">GigFloww</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <div class="dropdown">
+        <a href="#">Gigs ▼</a>
+        <div class="dropdown-content">
+          <a href="#">Design</a>
+          <a href="#">Writing</a>
+          <a href="#">Marketing</a>
+        </div>
+      </div>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <section class="headline">
+    <h1>Your Creative Gig Journey Starts Here</h1>
+    <p>Join the community where creativity meets opportunity.</p>
+    <button class="cta-button">Join Now</button>
+  </section>
+
+  <section class="features">
+    <div class="feature">Wide Range of Gigs</div>
+    <div class="feature">Secure Payments</div>
+    <div class="feature">Verified Clients</div>
+    <div class="feature">Real-time Support</div>
+  </section>
+
+  <section class="testimonial">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">"GigFloww helped me find my first client!" - Alex</div>
+        <div class="swiper-slide">"Great platform for creative professionals." - Priya</div>
+        <div class="swiper-slide">"Easy to use and super supportive team." - John</div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
+  <form id="signupForm">
+    <h2>Join as a Gig Worker</h2>
+    <input type="text" id="name" placeholder="Name" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <select id="category" required>
+      <option value="">Select Skill Category</option>
+      <option value="Design">Design</option>
+      <option value="Development">Development</option>
+      <option value="Writing">Writing</option>
+    </select>
+    <input type="url" id="portfolio" placeholder="Portfolio Link" required />
+    <button type="submit" class="button-primary">Submit</button>
+  </form>
+
+  <div style="text-align:center; margin-top:20px">
+    <button class="button-primary">Primary</button>
+    <button class="button-secondary">Secondary</button>
+    <button class="button-disabled" disabled>Disabled</button>
+  </div>
+  <footer>
+    <p>&copy; 2025 GigFloww. All rights reserved.</p>
+    <p>Follow us on:
+      <a href="#" >Instagram</a> |
+      <a href="#" >LinkedIn</a> |
+      <a href="#" >Twitter</a>
+    </p>
+  </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      loop: true,
+      autoplay: {
+        delay: 4000,
+      },
+    });
+
+    document.getElementById('signupForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Thank you for signing up!");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
